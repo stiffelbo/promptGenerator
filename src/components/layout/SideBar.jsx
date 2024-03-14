@@ -1,7 +1,7 @@
-const SideBar = () => {
+const SideBar = ({children}) => {
   return (
-    <div className="h-full bg-gray-200 w-2/12 p-4 overflow-auto">
-      SideBar Content
+    <div className="h-full bg-white w-2/12 p-4 overflow-auto">
+      {children}
     </div>
   );
 };

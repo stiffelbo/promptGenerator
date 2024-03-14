@@ -1,4 +1,4 @@
-const localStorageService = {
+const ls = {
     // Create or Update an item
     setItem: function (key, value) {
         try {
@@ -39,4 +39,4 @@ const localStorageService = {
     }
 };
 
-export default localStorageService;
+export default ls;

@@ -1,14 +1,22 @@
 import MainLayout from './components/layout/MainLayout';
 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+//Pages
+import { Pages } from './pages';
+
 function App() {
   return (
-    <MainLayout>
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Welcome to the Content Window</h1>
-        <p>This is where your main app content will go.</p>
-      </div>
-    </MainLayout>
-  )
+    <Router>
+      <MainLayout>
+        <Routes>
+          {Pages.map((page, index) => (
+            <Route key={index} path={page.link} element={<page.component />} />
+          ))}
+        </Routes>
+      </MainLayout>
+    </Router>
+  );
 }
 
 export default App
